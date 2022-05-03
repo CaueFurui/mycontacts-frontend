@@ -1,5 +1,5 @@
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import GlobalStyles from '../../assets/styles/global';
 import defaultTheme from '../../assets/styles/themes/default';
 import { Container } from './styles';
@@ -8,7 +8,7 @@ import Routes from '../../Routes';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <ThemeProvider theme={defaultTheme}>
         <GlobalStyles />
         <Container>
@@ -16,7 +16,7 @@ function App() {
           <Routes />
         </Container>
       </ThemeProvider>
-    </Router>
+    </BrowserRouter>
   );
 }
 
